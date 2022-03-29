@@ -134,9 +134,12 @@ const CreateProxys = (app) => {
       });
     }
   });
+
 }
-// CreateProxys(app);
-// app.listen(9003, () => {
-//   console.log(`Example app listening on port ${9003}`)
-// })
+// 本机启动项目
+CreateProxys(app);
+app.listen(9003, () => {
+  console.log(`Example app listening on port ${9003}`)
+})
+
 exports.default = CreateProxys
