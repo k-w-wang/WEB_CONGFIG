@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.3",
+    "http-proxy": "^1.18.1",
     "node-dev": "^7.2.0",
     "path": "^0.12.7",
     "pug": "^3.0.2"
