@@ -5,7 +5,12 @@ const app = express();
 const http_proxy_1 = require("http-proxy");
 
 const proxy = http_proxy_1.createProxyServer({});
-
+proxy.on("error", (err, req, res) => {
+  res.writeHead(500, {
+      "Content-Type": "text/plain"
+  });
+  res.end(`proxy: Failed to get response from upstream.`);
+});
 const appRoot = () => fs_1.realpathSync(process.cwd());
 const CONFIG_FILE = path.resolve(appRoot(), "proxy.config.json");
 
@@ -136,10 +141,10 @@ const CreateProxys = (app) => {
   });
 
 }
-// 本机启动项目
-CreateProxys(app);
-app.listen(9003, () => {
-  console.log(`Example app listening on port ${9003}`)
-})
+// // 本机启动项目
+// CreateProxys(app);
+// app.listen(9003, () => {
+//   console.log(`Example app listening on port ${9003}`)
+// })
 
 exports.default = CreateProxys
