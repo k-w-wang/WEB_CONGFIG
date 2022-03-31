@@ -1,11 +1,15 @@
 {
   "name": "@k_wang/web_config",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "配置代理",
   "main": "index.js",
   "scripts": {
     "dev": "node-dev index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/k-w-wang/WEB_CONGFIG"
   },
   "author": "k_wang",
   "license": "ISC",
